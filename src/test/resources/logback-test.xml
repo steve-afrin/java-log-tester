@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration> <!-- debug="true" scan="true">-->
+
+  <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+    <encodingCharset>UTF-8</encodingCharset>
+    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+      <pattern>[%-5level] %logger [%thread %mdc] - %message%n</pattern>
+    </encoder>
+  </appender>
+  <appender name="string" class="home.safrin.logback.appenders.StringAppender">
+    <encodingCharset>UTF-8</encodingCharset>
+    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+      <pattern>[%-5level] %logger [%thread %mdc] - %message%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="trace">
+    <appender-ref ref="console" />
+    <appender-ref ref="string" />
+  </root>
+
+</configuration>
